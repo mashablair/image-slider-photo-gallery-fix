@@ -1,0 +1,94 @@
+#photoGallery .swiper-container {
+    width: 100%;
+}
+#photoGallery .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: auto;
+    height:150px;
+    overflow: hidden;
+}
+#photoGallery .swiper-slide img{
+    height:100%;
+    object-fit:cover;
+    object-position: bottom;
+    font-family: 'object-fit: cover; object-position: bottom;';
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    -webkit-transition:opacity 0.5s linear;
+    -moz-transition:opacity 0.5s linear;
+    -o-transition:opacity 0.5s linear;
+    transition:opacity 0.5s linear;
+}
+#photoGallery .swiper-slide.swiper-slide-active img{
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+}
+#photoGallery .swiper-slide .photoGalleryItemCaption{
+    position:absolute;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+    color:#FFF;
+    width:100%;
+    text-align:center;
+    padding:10px 0;
+    white-space: nowrap;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    transition: all 0.5s ease;
+}
+
+#photoGallery #photoGalleryCaption{
+    background:#000;
+    text-align:center;
+    color:#FFF;
+    padding:10px 15px;
+    margin-top:10px;
+}
+@media (min-width:400px){
+    #photoGallery .swiper-slide{
+        height: 200px;
+    }
+}
+@media (min-width:480px){
+    #photoGallery .swiper-slide {
+        height: 300px;
+    }
+}
+@media (min-width:768px){
+    #photoGallery .swiper-slide {
+        height: 400px;
+    }
+    #photoGallery .swiper-slide.swiper-slide-active .photoGalleryItemCaption{
+        display:block;
+        bottom:15px;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
+    }
+    #photoGallery #photoGalleryCaption{
+        display:none;
+    }
+}
+@media (min-width:992px){
+    #photoGallery .swiper-slide {
+        height: 500px;
+    }
+}
+@media (min-width:1170px){
+    #photoGallery .swiper-slide {
+        height: 600px;
+    }
+}
